@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/logo.svg" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2563eb" />
+    
+    <meta
+      name="description"
+      content="Create professional, ATS-friendly resumes with AI-powered suggestions and customizable templates."
+    />
+    <meta
+      name="keywords"
+      content="resume builder, AI resume, CV maker, job application, professional resume"
+    />
+    <meta name="author" content="AI Resume Builder Team" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://airesumebuilder.com/" />
+    <meta property="og:title" content="AI Resume Builder - Create Professional Resumes" />
+    <meta property="og:description" content="Create professional, ATS-friendly resumes with AI-powered suggestions and customizable templates." />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://airesumebuilder.com/" />
+    <meta property="twitter:title" content="AI Resume Builder - Create Professional Resumes" />
+    <meta property="twitter:description" content="Create professional, ATS-friendly resumes with AI-powered suggestions and customizable templates." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/social-preview.png" />
+
+    <title>AI Resume Builder - Create Professional Resumes with AI</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" 
+      rel="stylesheet"
+    >
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI Resume Builder",
+      "url": "https://airesumebuilder.com/",
+      "description": "Create professional, ATS-friendly resumes with AI-powered suggestions and customizable templates.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <style>
+      /* Critical CSS to prevent layout shift */
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Loading animation */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #2563eb;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <h1>JavaScript Required</h1>
+        <p>You need to enable JavaScript to run this application.</p>
+        <p>AI Resume Builder requires JavaScript to provide the interactive resume building experience.</p>
+      </div>
+    </noscript>
+    
+    <div id="loading">
+      <div class="loading-spinner"></div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script>
+      // Hide loading spinner when React app loads
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(() => loading.remove(), 500);
+          }
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

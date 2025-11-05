@@ -1,0 +1,219 @@
+.resume-preview {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.preview-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.template-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.template-selector label {
+  font-weight: 600;
+}
+
+.template-selector select {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.preview-content {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  background: white;
+  min-height: 500px;
+}
+
+/* Modern Template Styles */
+.resume.modern {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.resume.modern .resume-header {
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #2563eb;
+}
+
+.resume.modern .resume-header h1 {
+  color: #1f2937;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.resume.modern .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.resume.modern .resume-section {
+  margin-bottom: 25px;
+}
+
+.resume.modern .resume-section h2 {
+  color: #2563eb;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.resume.modern .experience-item,
+.resume.modern .education-item {
+  margin-bottom: 20px;
+}
+
+.resume.modern .experience-item h3,
+.resume.modern .education-item h3 {
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.resume.modern .company-dates,
+.resume.modern .school-year {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.resume.modern .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume.modern .skill-tag {
+  background: #e5e7eb;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+}
+
+/* Classic Template Styles */
+.resume.classic {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.resume.classic .resume-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.resume.classic .resume-header h1 {
+  color: #1f2937;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.resume.classic .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.resume.classic .two-column {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.resume.classic .resume-section {
+  margin-bottom: 25px;
+}
+
+.resume.classic .resume-section h2 {
+  color: #1f2937;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #1f2937;
+  padding-bottom: 5px;
+}
+
+.resume.classic .experience-item,
+.resume.classic .education-item {
+  margin-bottom: 20px;
+}
+
+.resume.classic .experience-item h3,
+.resume.classic .education-item h3 {
+  color: #1f2937;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.resume.classic .company-dates,
+.resume.classic .school-year {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.resume.classic .skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.resume.classic .skill-tag {
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .preview-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .resume.classic .two-column {
+    grid-template-columns: 1fr;
+  }
+  
+  .resume.modern .contact-info {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}
